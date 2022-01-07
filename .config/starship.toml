@@ -1,0 +1,34 @@
+# https://starship.rs/config/
+
+# Don't print a new line at the start of the prompt
+# add_newline = false
+
+[character]
+# success_symbol = "[→](bold green)"
+success_symbol = "[ 👀 ](bold green)"
+error_symbol = "[ 🧨 ](bold red)"
+
+
+[nodejs]
+format = "[n⬢ de ](bold green)"
+
+[python]
+python_binary = "python3"
+format = "  ${version}"
+
+[git_branch]
+format = "on [$symbol$branch](bright-blue) "
+symbol = "🚀 "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]](bold green) )'
+stashed = "📦"
+# modified = ""
+# staged = ""
+# untracked = ""
+
+[cmd_duration]
+format = "[$duration](bold yellow) "
+
+[directory]
+format = "[$path](bold bright-blue)[$read_only]($read_only_style) "
