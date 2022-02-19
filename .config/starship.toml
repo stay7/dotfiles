@@ -4,31 +4,44 @@
 # add_newline = false
 
 [character]
-# success_symbol = "[→](bold green)"
-success_symbol = "[ 👀 ](bold green)"
-error_symbol = "[ 🧨 ](bold red)"
+# success_symbol = "[](bold bright-green)"
+success_symbol = "[  ](bold bright-white)" 
+error_symbol = "[  ](bold bright-red)"
 
+[custom.git_user]
+command = "git config user.name"
+directories = [".git"]
+symbol = " "
+format = "[$symbol$output](bright-white)"
 
 [nodejs]
-format = "[n⬢ de ](bold green)"
+format = "[n⬢ de ](bold bright-green)"
 
 [python]
 python_binary = "python3"
 format = "  ${version}"
 
+[java]
+symbol = " "
+style = "bright-red"
+
+[kotlin]
+symbol = "ﱃ "
+style = "bright-blue"
+
 [git_branch]
 format = "on [$symbol$branch](bright-blue) "
-symbol = "🚀 "
+symbol = " "
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]](bold green) )'
+format = '([\[$all_status$ahead_behind\]](bold bright-green) )'
 stashed = "📦"
 # modified = ""
 # staged = ""
 # untracked = ""
 
 [cmd_duration]
-format = "[$duration](bold yellow) "
+format = "[$duration](bold birght-yellow) "
 
 [directory]
 format = "[$path](bold bright-blue)[$read_only]($read_only_style) "
