@@ -27,10 +27,14 @@ style = "bright-red"
 
 [kotlin]
 symbol = "ﱃ "
-style = "bright-blue"
+style = "bright-purple"
+
+[ruby]
+symbol = " "
+style = "bright-red"
 
 [git_branch]
-format = "on [$symbol$branch](bright-blue) "
+format = "on [$symbol$branch](bright-cyan) "
 symbol = " "
 
 [git_status]
