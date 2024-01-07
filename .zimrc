@@ -1,0 +1,19 @@
+
+# https://zimfw.sh/docs/modules/
+zmodule environment
+zmodule input
+zmodule termtitle
+zmodule utility
+zmodule ssh
+zmodule exa
+zmodule completion
+zmodule archive
+zmodule asdf
+
+
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+zmodule zsh-users/zsh-autosuggestions
+
+zmodule joke/zim-starship
+zmodule kiesman99/zim-zoxide

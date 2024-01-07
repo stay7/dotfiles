@@ -1,0 +1,55 @@
+# https://starship.rs/config/
+
+# Don't print a new line at the start of the prompt
+# add_newline = false
+
+command_timeout = 200
+
+[character]
+# success_symbol = "[](bold bright-green)"
+success_symbol = "[  ](bold bright-white)" 
+error_symbol = "[  ](bold bright-red)"
+
+[custom.git_user]
+command = "git config user.name"
+directories = [".git"]
+symbol = " "
+format = "[$symbol$output](bright-white)"
+
+[nodejs]
+format = "[n⬢ de ](bold bright-green)"
+
+[python]
+python_binary = "python3"
+format = "  ${version}"
+
+[java]
+symbol = " "
+style = "bright-red"
+
+# [kotlin]
+# symbol = "ﱃ "
+# style = "bright-purple"
+# kotlin_binary = 'kotlinc'
+
+[ruby]
+symbol = " "
+style = "bright-red"
+
+[git_branch]
+format = "on [$symbol$branch](bright-cyan) "
+symbol = " "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]](bold bright-green) )'
+stashed = "📦"
+# modified = ""
+# staged = ""
+# untracked = ""
+
+[cmd_duration]
+format = "[$duration](bold birght-yellow) "
+
+[directory]
+format = "[$path](bold bright-blue)[$read_only]($read_only_style) "
+

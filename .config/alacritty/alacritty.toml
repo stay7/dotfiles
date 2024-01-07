@@ -1,0 +1,20 @@
+# https://alacritty.org/config-alacritty.html
+
+[font]
+size = 16
+offset = { x=0, y=5 }
+normal = { family="UbuntuMono Nerd Font", style="Regular" }
+bold = { family="UbuntuMono Nerd Font", style="Bold" }
+italic = { family="UbuntuMono Nerd Font", style="Italic" }
+bold_italic = { family="UbuntuMono Nerd Font", style="Bold Italic" }
+
+[window]
+padding = { x=10, y=10 }
+
+[terminal]
+osc52 = "CopyPaste"
+
+[keyboard]
+bindings = [
+ { key="Back", mods="Command", chars="\\x15" },
+]
