@@ -4,4 +4,5 @@
 
 ## asdf plugin
 `asdf plugin add rust`
+
 `asdf install rust <version>`
