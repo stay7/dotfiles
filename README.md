@@ -4,6 +4,7 @@
 
 ## asdf plugin
 `asdf plugin add rust`
+`asdf plugin add starship`
 
 `asdf list all rust`
 
