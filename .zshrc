@@ -7,11 +7,8 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-# ------------------
-# Initialize modules
-# ------------------
-
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
 # Download zimfw plugin manager if missing.
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   if (( ${+commands[curl]} )); then
@@ -26,16 +23,9 @@ fi
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
+
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
-
-# ------------------------------
-# Post-init module configuration
-# ------------------------------
-
-#
-# zsh-history-substring-search
-#
 
 zmodload -F zsh/terminfo +p:terminfo
 # Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
@@ -45,6 +35,9 @@ for key ('k') bindkey -M vicmd ${key} history-substring-search-up
 for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
 # }}} End configuration added by Zim install
+
+# init starship
+eval "$(starship init zsh)"
 
 # load alias
 source ~/.alias
