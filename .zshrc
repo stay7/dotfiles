@@ -41,3 +41,4 @@ eval "$(starship init zsh)"
 
 # load alias
 source ~/.alias
+eval "$(/Users/stay7/.local/bin/mise activate zsh)"
