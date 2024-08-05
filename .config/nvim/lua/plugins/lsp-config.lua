@@ -60,57 +60,46 @@ return {
         keys = {
           {
             "gD",
-            function()
-              local params = vim.lsp.util.make_position_params()
-              LazyVim.lsp.execute({
-                command = "typescript.goToSourceDefinition",
-                arguments = { params.textDocument.uri, params.position },
-                open = true,
-              })
-            end,
+           function()
+                require("vtsls").commands.goto_source_definition(0)
+              end, 
             desc = "Goto Source Definition",
           },
           {
             "gR",
-            function()
-              LazyVim.lsp.execute({
-                command = "typescript.findAllFileReferences",
-                arguments = { vim.uri_from_bufnr(0) },
-                open = true,
-              })
-            end,
+function()
+                require("vtsls").commands.file_references(0)
+              end,
             desc = "File References",
           },
           {
             "<leader>co",
-            LazyVim.lsp.action["source.organizeImports"],
+	     function()
+                require("vtsls").commands.organize_imports(0)
+              end,
             desc = "Organize Imports",
           },
           {
             "<leader>cM",
-            LazyVim.lsp.action["source.addMissingImports.ts"],
+	    function()
+                require("vtsls").commands.add_missing_imports(0)
+              end,
             desc = "Add missing imports",
           },
           {
             "<leader>cu",
-            LazyVim.lsp.action["source.removeUnused.ts"],
+	    function()
+                require("vtsls").commands.remove_unused_imports(0)
+              end,
             desc = "Remove unused imports",
           },
           {
             "<leader>cD",
-            LazyVim.lsp.action["source.fixAll.ts"],
+	     function()
+                require("vtsls").commands.fix_all(0)
+              end,
             desc = "Fix all diagnostics",
           },
-          {
-            "<leader>cV",
-            function()
-              LazyVim.lsp.execute({
-                command = "typescript.selectTypeScriptVersion",
-              })
-            end,
-            desc = "Select TS workspace version",
-          },
-        },
       },
       eslint = {
         settings = {
