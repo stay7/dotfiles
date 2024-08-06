@@ -1,4 +1,5 @@
 alias gs="git status"
 alias ls="ls -alh"
 alias vim="nvim"
+alias diff="difft"
 
