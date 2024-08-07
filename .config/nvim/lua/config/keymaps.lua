@@ -1,3 +1,10 @@
+-- override default key mappings
+vim.keymap.set("n", "<C-i>", "<C-o>")
+vim.keymap.set("n", "<C-o>", "<C-i>")
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- Move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
@@ -17,3 +24,6 @@ vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "find l
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "diagnostics" })
 vim.keymap.set("n", "<leader>f/", builtin.grep_string, { desc = "grep" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "live grep" })
+
+-- File-tree mappings
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })
