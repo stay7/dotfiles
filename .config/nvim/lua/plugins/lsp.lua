@@ -121,6 +121,7 @@ return {
 
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+					"tsserver",
 					"vtsls",
 					"lua_ls",
 				},
@@ -136,8 +137,45 @@ return {
 						local lua_opts = lsp_zero.nvim_lua_ls()
 						require("lspconfig").lua_ls.setup(lua_opts)
 					end,
+
+					tsserver = function()
+						return true
+					end,
 				},
 			})
+		end,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		opts = {},
+	},
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
+	{
+		"b0o/schemastore.nvim",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+		opts = {},
+		ft = {
+			"json",
+			"jsonc",
+		},
+	},
+	{ "echasnovski/mini.nvim", version = "*" },
+	{
+		"preservim/nerdcommenter",
+		init = function()
+			vim.keymap.set(
+				{ "n", "v" },
+				"<C-/>",
+				"<Plug>NERDCommenterToggle",
+				{ noremap = true, silent = true, desc = "comment" }
+			)
 		end,
 	},
 }

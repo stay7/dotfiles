@@ -18,12 +18,12 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.git_files, { desc = "find git" })
+vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "find git" })
 vim.keymap.set("n", "<leader> ", builtin.find_files, { desc = "find files" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "find lsp document symbols" })
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "diagnostics" })
 vim.keymap.set("n", "<leader>f/", builtin.grep_string, { desc = "grep" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "live grep" })
+vim.keymap.set("n", "<leader>/", builtin.live_grep, { desc = "live grep" })
 
 -- File-tree mappings
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })
