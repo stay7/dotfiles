@@ -12,7 +12,6 @@ return {
 		opts = {
 			ensure_installed = {
 				"stylua",
-				"prettier",
 			},
 		},
 		keys = {
@@ -95,11 +94,23 @@ return {
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
+			local allow_format = function(servers)
+				return function(client)
+					return vim.tbl_contains(servers, client.name)
+				end
+			end
 
 			-- lsp_attach is where you enable features that only work
 			-- if there is a language server active in the file
 			local lsp_attach = function(client, bufnr)
 				local opts = { buffer = bufnr }
+				local lspFormat = function()
+					vim.lsp.buf.format({
+						async = true,
+						timeout_ms = 10000,
+						filter = allow_format({ "lua_ls" }),
+					})
+				end
 
 				vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
 				vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
@@ -109,7 +120,7 @@ return {
 				vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 				vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 				vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-				vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+				vim.keymap.set({ "n", "x" }, "<F3>", lspFormat, opts)
 				vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 			end
 
@@ -121,7 +132,6 @@ return {
 
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"tsserver",
 					"vtsls",
 					"lua_ls",
 				},
@@ -138,8 +148,44 @@ return {
 						require("lspconfig").lua_ls.setup(lua_opts)
 					end,
 
-					tsserver = function()
-						return true
+					tsserver = lsp_zero.noop,
+					vtsls = function()
+						require("lspconfig").vtsls.setup({
+							filetypes = {
+								"javascript",
+								"javascriptreact",
+								"javascript.jsx",
+								"typescript",
+								"typescriptreact",
+								"typescript.tsx",
+							},
+							settings = {
+								complete_function_calls = true,
+								vtsls = {
+									enableMoveToFileCodeAction = true,
+									autoUseWorkspaceTsdk = true,
+									experimental = {
+										completion = {
+											enableServerSideFuzzyMatch = true,
+										},
+									},
+								},
+								typescript = {
+									updateImportsOnFileMove = { enabled = "always" },
+									suggest = {
+										completeFunctionCalls = true,
+									},
+									inlayHints = {
+										enumMemberValues = { enabled = true },
+										functionLikeReturnTypes = { enabled = true },
+										parameterNames = { enabled = "literals" },
+										parameterTypes = { enabled = true },
+										propertyDeclarationTypes = { enabled = true },
+										variableTypes = { enabled = false },
+									},
+								},
+							},
+						})
 					end,
 				},
 			})
