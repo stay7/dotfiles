@@ -39,6 +39,9 @@ unset key
 # init starship
 eval "$(starship init zsh)"
 
+# init fzf
+source <(fzf --zsh)
+
 # load alias
 source ~/.alias
 eval "$(/Users/stay7/.local/bin/mise activate zsh)"
