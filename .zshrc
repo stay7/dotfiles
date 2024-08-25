@@ -42,6 +42,11 @@ eval "$(starship init zsh)"
 # init fzf
 source <(fzf --zsh)
 
+export GTK_IM_MODULE=kime
+export QT_IM_MODULE=kime
+export EMODIFIERS=@im=kime
+
 # load alias
 source ~/.alias
-eval "$(/Users/stay7/.local/bin/mise activate zsh)"
+
+eval "$(mise activate zsh)"
