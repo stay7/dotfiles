@@ -8,6 +8,7 @@ zmodule ssh
 zmodule exa
 zmodule completion
 zmodule archive
+zmoudle fzf
 
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
