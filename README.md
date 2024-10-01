@@ -4,6 +4,10 @@
 
 `zimfw install`
 
+## install mise
+`$ curl https://mise.run | sh`
+
+
 ## asdf plugin
 `asdf plugin add rust`
 `asdf plugin add starship`
