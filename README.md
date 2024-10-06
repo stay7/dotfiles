@@ -1,6 +1,7 @@
 ## install using brew
 - zsh
 - fzf
+- starship
 
 ## zim module install
 `curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh`
@@ -9,10 +10,6 @@
 
 ## install starship
 `curl -sS https://starship.rs/install.sh | sh`
-
-## install mise
-`$ curl https://mise.run | sh`
-
 
 ## asdf plugin
 `asdf plugin add rust`
