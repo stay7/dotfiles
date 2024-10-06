@@ -1,11 +1,14 @@
 ## install using brew
-brew install zsh
-brew install fzf
+- zsh
+- fzf
 
 ## zim module install
 `curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh`
 
 `zimfw install`
+
+## install starship
+`curl -sS https://starship.rs/install.sh | sh`
 
 ## install mise
 `$ curl https://mise.run | sh`
