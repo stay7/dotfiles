@@ -1,0 +1,42 @@
+let mapleader="\<Space>"
+
+set which-key
+set timeoutlen=5000
+set NERDTree
+
+set relativenumber
+set expandtab
+
+set smartindent
+set noswapfile
+set nobackup
+
+set nohlsearch
+set incsearch
+
+set clipboard=unnamedplus
+set ideajoin
+
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>E :NERDTreeFind<CR>
+nnoremap <C-i> <C-o>
+nnoremap <C-o> <C-i>
+
+xnoremap J :m'>+1<CR>gv=gv
+xnoremap K :m'<-2<CR>gv=gv
+
+:set keep-english-in-normal
+
+" harpoon
+nmap <leader>H1 :action SetHarpoon1<cr>
+nmap <leader>H2 :action SetHarpoon2<cr>
+nmap <leader>H3 :action SetHarpoon3<cr>
+nmap <leader>H4 :action SetHarpoon4<cr>
+
+nmap <leader>h1 :action GotoHarpoon1<cr>
+nmap <leader>h2 :action GotoHarpoon2<cr>
+nmap <leader>h3 :action GotoHarpoon3<cr>
+nmap <leader>h4 :action GotoHarpoon4<cr>
+
+nmap <leader>hl :action ShowHarpoon<cr>
+nmap <leader>ha :action AddToHarpoon<cr>
