@@ -1,4 +1,7 @@
-## install using brew
+## Install kitty
+`curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
+
+## Install using brew
 - zsh
 - fzf
 - starship
