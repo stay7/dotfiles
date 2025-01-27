@@ -22,3 +22,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "120"
 
 vim.g.lazyvim_prettier_needs_config = false
+
+vim.diagnostic.config({ virtual_lines = true })
