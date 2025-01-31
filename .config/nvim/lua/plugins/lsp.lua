@@ -121,13 +121,17 @@ return {
 				vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 				vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 				vim.keymap.set({ "n", "x" }, "<F3>", lspFormat, opts)
-				vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+				vim.keymap.set("n", "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 			end
 
 			lsp_zero.extend_lspconfig({
 				sign_text = true,
 				lsp_attach = lsp_attach,
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			})
+
+			vim.diagnostic.config({
+				virtual_lines = true,
 			})
 
 			require("mason-lspconfig").setup({

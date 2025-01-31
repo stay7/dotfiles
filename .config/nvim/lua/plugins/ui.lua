@@ -84,7 +84,7 @@ return {
 		end,
 	},
 	{
-		"akinsho/bufferline.nvim",
+		"akinsho/bufferline.nvim", -- 버퍼 관리
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 		opts = function()
