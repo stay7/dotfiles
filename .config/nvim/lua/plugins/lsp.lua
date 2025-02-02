@@ -152,7 +152,6 @@ return {
 						require("lspconfig").lua_ls.setup(lua_opts)
 					end,
 
-					tsserver = lsp_zero.noop,
 					vtsls = function()
 						require("lspconfig").vtsls.setup({
 							filetypes = {
