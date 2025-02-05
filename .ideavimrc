@@ -1,7 +1,5 @@
 let mapleader="\<Space>"
 
-set which-key
-set timeoutlen=5000
 set NERDTree
 
 set relativenumber
@@ -14,6 +12,9 @@ set nobackup
 set nohlsearch
 set incsearch
 
+set ignorecase
+set smartcase
+
 set clipboard=unnamedplus
 set ideajoin
 
@@ -24,6 +25,14 @@ nnoremap <C-o> <C-i>
 
 xnoremap J :m'>+1<CR>gv=gv
 xnoremap K :m'<-2<CR>gv=gv
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-l> <C-w>l
+
+nnoremap ss :split<cr>
+nnoremap sv :vsplit<cr>
 
 :set keep-english-in-normal
 
@@ -40,3 +49,13 @@ nmap <leader>h4 :action GotoHarpoon4<cr>
 
 nmap <leader>hl :action ShowHarpoon<cr>
 nmap <leader>ha :action AddToHarpoon<cr>
+
+"which-key https://github.com/TheBlob42/idea-which-key
+set which-key
+set notimeout
+set timeoutlen=5000
+let g:WhichKeyDesc_harpoon_set = "<leader>H Harpoon set"
+let g:WhichKeyDesc_harpoon_go = "<leader>h Harpoon go"
+let g:WhichKey_ShowVimActions = "true"
+
+
