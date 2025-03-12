@@ -43,3 +43,7 @@ keymap.set("n", "<leader>/", builtin.live_grep, { desc = "live grep" })
 
 -- File-tree mappings
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })
+
+-- diagnostics
+keymap.set("n", "<F2>", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+keymap.set("n", "<S-F2>", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
