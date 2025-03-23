@@ -1,11 +1,12 @@
 return {
-	"Mofiqul/vscode.nvim",
-	lazy = false,
-	opts = {
-		transparent = true,
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		opts = {},
 	},
-	config = function()
-		vim.cmd.colorscheme("vscode")
-		vim.o.background = "dark"
-	end,
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		lazy = false,
+	},
 }
