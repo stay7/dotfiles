@@ -87,6 +87,10 @@ return {
 		"akinsho/bufferline.nvim", -- 버퍼 관리
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
+		keys = {
+			{ "<C-n>", ":bnext<CR>", mode = { "n" }, desc = "next buffer" },
+			{ "<C-p>", ":bprev<CR>", mode = { "n" }, desc = "previous buffer" },
+		},
 		opts = function()
 			local Offset = require("bufferline.offset")
 			if not Offset.edgy then
