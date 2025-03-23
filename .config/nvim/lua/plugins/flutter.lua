@@ -55,7 +55,6 @@ return {
 		end,
 		-- https://github.com/nvim-flutter/flutter-tools.nvim?tab=readme-ov-file#usage
 		keys = {
-			{ "<leader>F", group = "Flutter" },
 			{ "<leader>Fs", "<cmd>FlutterRun<cr>", desc = "flutter run" },
 			{ "<leader>FR", "<cmd>FlutterRestart<cr>", desc = "restart" },
 			{ "<leader>Fr", "<cmd>FlutterReload<cr>", desc = "reload" },

@@ -13,7 +13,7 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
-keymap.set("n", "sv", ":vplit<Return>", opts)
+keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- Resize window
 keymap.set("n", "<C-w><left>", "<C-w><", opts)
@@ -34,12 +34,13 @@ keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 
 -- telescope
 local builtin = require("telescope.builtin")
-keymap.set("n", "<leader>fg", builtin.git_files, { desc = "find git" })
+keymap.set("n", "<leader>/", builtin.live_grep, { desc = "live grep" })
 keymap.set("n", "<leader> ", builtin.find_files, { desc = "find files" })
+keymap.set("n", "<leader>fg", builtin.git_files, { desc = "find git" })
 keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "find lsp document symbols" })
 keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "diagnostics" })
+keymap.set("n", "<leader>fb", builtin.buffers, { desc = "find buffers" })
 keymap.set("n", "<leader>f/", builtin.grep_string, { desc = "grep" })
-keymap.set("n", "<leader>/", builtin.live_grep, { desc = "live grep" })
 
 -- File-tree mappings
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })

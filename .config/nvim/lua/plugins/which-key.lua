@@ -6,6 +6,13 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 		preset = "helix",
+		spec = {
+			{ "<leader>F", group = "Flutter dev tools" },
+			{ "<leader>g", group = "Git" },
+			{ "<leader>h", group = "harpoon" },
+			{ "<leader>u", group = "ui" },
+			{ "<leader>f", group = "find" },
+		},
 	},
 	keys = {
 		{

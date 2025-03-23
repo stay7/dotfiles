@@ -218,13 +218,11 @@ return {
 	{ "echasnovski/mini.nvim", version = "*" },
 	{
 		"preservim/nerdcommenter",
+		keys = {
+			{ "<C-/>", "<Plug>NERDCommenterToggle", mode = { "n", "v" }, desc = "comment" },
+		},
 		init = function()
-			vim.keymap.set(
-				{ "n", "v" },
-				"<C-/>",
-				"<Plug>NERDCommenterToggle",
-				{ noremap = true, silent = true, desc = "comment" }
-			)
+			vim.g.NERDCreateDefaultMappings = 0
 		end,
 	},
 }
