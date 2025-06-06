@@ -41,6 +41,7 @@ keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "find lsp d
 keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "diagnostics" })
 keymap.set("n", "<leader>fb", builtin.buffers, { desc = "find buffers" })
 keymap.set("n", "<leader>f/", builtin.grep_string, { desc = "grep" })
+keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "old files" })
 
 -- File-tree mappings
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })
