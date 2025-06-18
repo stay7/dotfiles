@@ -1,5 +1,9 @@
+alias git g
 alias gs="git status"
-alias ls="ls -alh"
+alias gf="git fetch"
+alias grd="git fetch origin && git rebase origin/develop"
+alias ls="exa -alh"
 alias vim="nvim"
 alias diff="difft"
+
 
