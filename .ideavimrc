@@ -18,6 +18,10 @@ set smartcase
 set clipboard=unnamedplus
 set ideajoin
 
+" disable bell
+set visualbell
+set noerrorbells
+
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>E :NERDTreeFind<CR>
 nnoremap <C-i> <C-o>
