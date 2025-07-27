@@ -24,3 +24,18 @@ vim.opt.colorcolumn = "120"
 vim.g.lazyvim_prettier_needs_config = false
 
 vim.diagnostic.config({ virtual_lines = true })
+
+vim.cmd([[
+    cabbrev ㅈ w
+    cabbrev ㅂ q
+    cabbrev ㅈㅂ wq
+]])
+
+local function im_select_english()
+	vim.fn.system("fcitx5-remote -s keyboard-us")
+end
+
+vim.keymap.set("n", "<Esc>", function()
+	im_select_english()
+	return "<Esc>"
+end, { expr = true, silent = true })
