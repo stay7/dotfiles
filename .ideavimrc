@@ -39,6 +39,23 @@ nnoremap ss :split<cr>
 nnoremap sv :vsplit<cr>
 
 :set keep-english-in-normal
+:set trackactionids
+
+"which-key https://github.com/TheBlob42/idea-which-key
+set which-key
+set notimeout
+set timeoutlen=5000
+let g:WhichKey_ShowVimActions = "true"
+
+"Git
+nmap <leader>gb :action Annotate<cr>
+nmap <leader>gB :action Git.CreateNewBranch<cr>
+let g:WhichKeyDesc_git = "<leader>g Git"
+let g:WhichKeyDesc_git_new_branch = "<leader>gB New branch"
+let g:WhichKeyDesc_git_new_branch = "<leader>gb blame"
+
+"IDE
+nmap <leader>R :action Run<cr>
 
 " harpoon
 nmap <leader>H1 :action SetHarpoon1<cr>
@@ -53,13 +70,8 @@ nmap <leader>h4 :action GotoHarpoon4<cr>
 
 nmap <leader>hl :action ShowHarpoon<cr>
 nmap <leader>ha :action AddToHarpoon<cr>
-
-"which-key https://github.com/TheBlob42/idea-which-key
-set which-key
-set notimeout
-set timeoutlen=5000
 let g:WhichKeyDesc_harpoon_set = "<leader>H Harpoon set"
 let g:WhichKeyDesc_harpoon_go = "<leader>h Harpoon go"
-let g:WhichKey_ShowVimActions = "true"
+
 
 
