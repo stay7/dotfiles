@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "explore": {
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "librarian": {
+      "model": "google/gemini-3-pro"
+    },
+    "oracle": {
+      "model": "openai/gpt-5.2"
+    },
+    "frontend-ui-ux-engineer": {
+      "model": "anthropic/claude-opus-4-5"
+    },
+    "document-writer": {
+      "model": "anthropic/claude-sonnet-4-5"
+    },
+    "multimodal-looker": {
+      "model": "google/gemini-2.5-pro"
+    },
+    "atlas": {
+      "model": "openai/gpt-5.2-codex"
+    }
+  },
+  "categories": {
+    "ultrabrain": {
+      "model": "openai/gpt-5.2"
+    },
+    "deep": {
+      "model": "openai/gpt-5.2-codex"
+    },
+    "visual-engineering": {
+      "model": "anthropic/claude-opus-4-5"
+    },
+    "artistry": {
+      "model": "anthropic/claude-opus-4-5"
+    },
+    "quick": {
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "writing": {
+      "model": "anthropic/claude-sonnet-4-5"
+    },
+    "unspecified-low": {
+      "model": "google/gemini-2.5-flash"
+    },
+    "unspecified-high": {
+      "model": "google/gemini-2.5-pro"
+    }
+  }
+}
