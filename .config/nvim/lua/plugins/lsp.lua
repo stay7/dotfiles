@@ -25,7 +25,6 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"onsails/lspkind.nvim",
 			"ray-x/cmp-treesitter",
@@ -202,11 +201,6 @@ return {
 		opts = {},
 	},
 	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		opts = {},
-	},
-	{
 		"b0o/schemastore.nvim",
 		dependencies = {
 			"neovim/nvim-lspconfig",
@@ -218,13 +212,4 @@ return {
 		},
 	},
 	{ "echasnovski/mini.nvim", version = "*" },
-	{
-		"preservim/nerdcommenter",
-		keys = {
-			{ "<C-/>", "<Plug>NERDCommenterToggle", mode = { "n", "v" }, desc = "comment" },
-		},
-		init = function()
-			vim.g.NERDCreateDefaultMappings = 0
-		end,
-	},
 }
