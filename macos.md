@@ -16,3 +16,6 @@ defaults export com.apple.symbolichotkeys - | plutil -convert json -o - - |
 **keyboard > input source**
 - correct spelling automatically 끄기
 - capitalize words automatically 끄기
+
+**Desktop & Dock**
+- prefer tabs when opening documents : Always
