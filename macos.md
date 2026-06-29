@@ -12,3 +12,7 @@ defaults export com.apple.symbolichotkeys - | plutil -convert json -o - - |
   plutil -convert xml1 -o - - | defaults import com.apple.symbolichotkeys -
 # 이후 컴퓨터 재로그인
 ```
+
+**keyboard > input source**
+- correct spelling automatically 끄기
+- capitalize words automatically 끄기
